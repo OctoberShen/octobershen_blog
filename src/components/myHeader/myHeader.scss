@@ -1,0 +1,78 @@
+.my-header {
+  width: 100%;
+  height: 90px;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  .header-wrapper {
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    .logo {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      color: #262a30;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 25px;
+      box-sizing: border-box;
+      cursor: pointer;
+      margin-right: auto;
+      .line {
+        width: 100px;
+        height: 2px;
+        background-color: #262a30;
+        animation: logo-line .5s;
+        transition: width .3s;
+      }
+      .blog-name {
+        animation: logo-name .5s;
+        background: none;
+      }
+    }
+    .logo:hover .line {
+      width: 0;
+    }
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #dedbdb;
+      .nav-item {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        cursor: pointer;
+        .nav-name{
+          margin-left: 5px;
+        }
+      }
+      .nav-item:hover{
+        background: #262a30;
+        color: #ffffff !important;
+      }
+    }
+  }
+}
+@keyframes logo-name {
+  0% {
+    margin-left: -60px;
+    opacity: 0
+  }
+  to {
+    margin-left: 0;
+    opacity: 1
+  }
+}
+@keyframes logo-line {
+  0% {
+    width: 0
+  }
+  to {
+    width: 100px
+  }
+}
